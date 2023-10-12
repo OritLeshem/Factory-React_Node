@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {employeeService} from '../services/employee.service'
 import {utilsService} from '../services/utils.service'
-
+import {Link} from'react-router-dom'
 export function EmployeeIndex() {
   const [employees, setEmployees] = useState([])
   useEffect(() => {
@@ -13,9 +13,10 @@ export function EmployeeIndex() {
   }, [])
   
   return (
-    <div>
+    <div className="employee-add-container">
         <h1>Employees</h1>
-        
+        <Link className="button-link" to="/employeeAdd">Add Employee</Link>
+
         
         <table >
             <thead>
@@ -28,7 +29,9 @@ export function EmployeeIndex() {
             <tbody>
                 {employees&&employees.map(emp => (
                     <tr key={emp._id}>
-                        <td><a href={`editEmployee.html?id=${emp._id}`}>{emp.firstName} {emp.lastName}</a></td>
+                        <td>
+                          <Link to={`/employeeEdit/${emp._id}`}>{emp.firstName} {emp.lastName}</Link>
+                        </td>
                         <td>{emp.department ? emp.department.departmentName : 'No Department'}</td>
                         <td>
                             <ul>

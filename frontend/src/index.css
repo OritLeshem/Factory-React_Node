@@ -10,18 +10,45 @@ body {
 *:after {
   box-sizing: border-box;
 }
-
+nav{
+  margin:30px;
+}
 h1 {
   font-size: 2.5em;
   color: #4CAF50;
-  /* Adding a subtle text shadow */
   padding: 20px 30px;
   margin-left: 30px;
   margin-right: 30px;
   display: inline-block;
 }
 
-table {
+.employee-add-container {
+  background: #fff;
+  padding: 20px;
+  margin: 30px auto;
+  /* border-radius: 8px; */
+  max-width: 600px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.employee-form .form-group {
+  margin-bottom: 20px;
+}
+
+.employee-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.employee-form input[type="text"],
+.employee-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.table {
   width: 70%;
   border-collapse: collapse;
   background: #fff;
@@ -55,7 +82,7 @@ button {
   background: #28a745;
   color: #fff;
   padding: 10px 20px;
-  margin: 20px;
+  margin: 10px 0;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -70,7 +97,8 @@ select {
   margin: 20px;
   border: 1px solid #ddd;
 }
-.button-link{
+
+.button-link {
   display: inline-block;
   background: #28a745;
   color: #fff;
@@ -79,7 +107,11 @@ select {
   border: none;
   cursor: pointer;
   margin-right: 20px;
-  width:150px;
+  width: 150px;
   text-align: center;
+}
 
+.form-actions {
+  display: flex;
+  justify-content: space-between;
 }

@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/employee" element={<EmployeeIndex />} />
         <Route path="/employeeAdd" element={<EmployeeAdd />} />
-        <Route path="/employeeEdit" element={<EmployeeEdit />} />
+        <Route path="/employeeEdit/:id" element={<EmployeeEdit />} />
         <Route path="/department" element={<DepartmentIndex />} />
         <Route path="/shift" element={<ShiftIndex />} />
 
